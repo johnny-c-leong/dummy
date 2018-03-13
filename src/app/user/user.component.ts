@@ -43,7 +43,7 @@ export class UserComponent implements OnInit {
 
 
    this.dataService.getUser('BradTraversy').subscribe(x=>{console.log(x)})
-   Observable.fromEvent($("#myinput"),'keyup').subscribe(x=>{})
+   // Observable.fromEvent($("#myinput"),'keyup').subscribe(x=>{})
 
  // const s$ =  Observable.fromEvent($("#myinput"),'keyup')
   // .map(e=> log e.target.value)
