@@ -1,0 +1,60 @@
+<h1>{{name}}</h1>
+{{hobbies}}
+<ul>
+<li *ngFor="let hobby of hobbies; let i=index">{{i+1}}: {{hobby}}
+<button (click)="deleteHobby(hobby)">X</button>
+
+</li>
+
+</ul>
+
+
+<button (click)="onClick()">Click Me</button>
+<button (click)="toggleEdit()">Edit User</button>
+
+
+<div *ngIf=isEdit>
+<h1>Edit User</h1>
+<form>
+<div>
+    <label for="name">Name:</label><br>
+    <input type="text" [(ngModel)]="name" name="name">
+</div>
+
+</form>
+</div>
+
+
+
+
+<H1>Hobbies</H1>
+<form (submit)="addHobby(hobby.value)">
+    <!-- <div> -->
+        <label for="hobby" >Hobby</label>
+        <input type="text" id="hobby" #hobby >
+
+
+    <!-- </div> -->
+
+
+</form>
+
+<h1>AutoComplete</h1>
+<input type="text" id='myinput'>
+<div id='output'></div>
+
+
+
+
+
+
+
+
+
+
+<h1>Posts</h1>
+<div *ngFor = "let post of posts">
+    <h4>{{post.title}}</h4>
+    <p>{{post.body}}</p>
+</div>
+
