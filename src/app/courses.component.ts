@@ -3,6 +3,7 @@ import { CoursesService } from './courses.service';
 
 @Component({
     selector : 'courses',
+    // this has no html template
     template :`
     <h2>{{ title }}</h2>
     <ul>
