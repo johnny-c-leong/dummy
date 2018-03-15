@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service'
 import { Observable } from "rxjs/Rx"
-import $ from 'jquery';
+// import $ from 'jquery';
 // import 'rxjs/Rx'
 
 
@@ -35,11 +35,11 @@ export class UserComponent implements OnInit {
       state:'MA'
     };
     this.hobbies=['Sing','Dance','Play'];
-    this.dataService.getPosts().subscribe(
-      (posts) => {
-        this.posts = posts;
-      }
-    )
+    // this.dataService.getPosts().subscribe(
+    //   (posts) => {
+    //     this.posts = posts;
+    //   }
+    // )
 
 
    this.dataService.getUser('BradTraversy').subscribe(x=>{console.log(x)})

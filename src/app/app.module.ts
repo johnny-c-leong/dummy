@@ -9,14 +9,17 @@ import { FormsModule} from '@angular/forms';
 import { DataService} from './services/data.service';
 import {HttpModule} from '@angular/http'
 import { RouterModule, Routes} from '@angular/router'
-import $ from 'jquery';
+// import $ from 'jquery';
 import { Observable } from "rxjs/Rx";
 import { AboutComponent } from './about/about.component'
 import { componentFactoryName } from '@angular/compiler';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const appRoutes: Routes = [
   {path :'',component:UserComponent},
-{path :'about', component:AboutComponent}]
+  {path :'course',component:CourseComponent},
+  {path :'about', component:AboutComponent}
+]
 
 
 
@@ -30,7 +33,8 @@ const appRoutes: Routes = [
     CoursesComponent,
     CourseComponent,
     UserComponent,
-    AboutComponent
+    AboutComponent,
+    NavbarComponent
 
     
   ],
